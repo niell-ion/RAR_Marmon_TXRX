@@ -1,0 +1,865 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://niell-ion.github.io/RAR_Marmon_TXRX/rar/">
+      
+      
+        <link rel="prev" href="../about/">
+      
+      
+        <link rel="next" href="../switchgap/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>RAR - TXRX Doc Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rar-troubleshooting-manual" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TXRX Doc Hub" class="md-header__button md-logo" aria-label="TXRX Doc Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TXRX Doc Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RAR
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TXRX Doc Hub" class="md-nav__button md-logo" aria-label="TXRX Doc Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TXRX Doc Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    RAR
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    RAR
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-equipment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Equipment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safety Information
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addressing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addressing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overcurrent-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overcurrent Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#charger-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charger Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relay-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relay Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relay Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motor-relays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motor relays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#charger-relays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charger Relays
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#board-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Board Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../switchgap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Switch Gap Detector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crossing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Portable Crossing Guard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-equipment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Equipment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safety Information
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addressing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addressing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overcurrent-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overcurrent Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#charger-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charger Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relay-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relay Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relay Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motor-relays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motor relays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#charger-relays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charger Relays
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#board-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Board Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="rar-troubleshooting-manual">RAR Troubleshooting Manual<a class="headerlink" href="#rar-troubleshooting-manual" title="Permanent link">&para;</a></h1>
+<p><img alt="RAR Circuit Board" src="../assets/Board1.jpg" /></p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>This manual is for use by qualified technicians for onsite troubleshooting of the RAR automated switch system. This is not a product manual or schematic. This manual covers only the steps to diagnose issues, and should not be used to repair or modify the RAR.</p>
+<h3 id="required-equipment">Required Equipment<a class="headerlink" href="#required-equipment" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Multimeter</li>
+<li>1/8" Flat head screwdriver</li>
+<li>Personal protective equipment</li>
+</ul>
+<h3 id="safety-information">Safety Information<a class="headerlink" href="#safety-information" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Read all instructions before troubleshooting</li>
+<li>Disconnect power before servicing</li>
+<li>Use personal protective equipment as needed</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Verify that the device is connected to a working power source</p>
+</li>
+<li>
+<p>Visually inspect the status lights</p>
+<ul>
+<li><span style="background-color:rgb(0, 153, 69)"><span style="color:white;"> Green </span></span>: Operator is currently connected to device</li>
+<li><span style="background-color:rgb(255, 251, 0)"> Yellow </span> : Device is currently in motion</li>
+<li><span style="background-color:rgb(255, 0, 0)"><span style="color:white;"> Red </span></span>: Error</li>
+</ul>
+</li>
+<li>
+<p>Visually inspect the switch</p>
+<ul>
+<li>If switch is obstructed or housing is visibly rotated off of the ground, refer to <a href="#overcurrent-issues">Overcurrent Issues</a></li>
+</ul>
+</li>
+<li>
+<p>Open enclosure and check for any error codes or status lights. </p>
+<ul>
+<li>Verify that the device is in the correct mode for local control and that no remote users are connected</li>
+<li>Ensure that cable, relay, and fuse connections are secure</li>
+</ul>
+<p><img alt="Battery Terminal" src="../assets/Plug.jpg" style="height:350px;width:350px" /></p>
+</li>
+<li>
+<p>Disconnect plug labeled <code>Charger</code> and measure input voltage</p>
+<ul>
+<li>Using a multimeter, probe across <code>24V IN</code> and <code>GND</code>, or <code>VBAT</code> and <code>GND</code></li>
+<li><strong>Perform this step before proceeding as low voltage may present as other errors</strong></li>
+<li>If board is receiving less than <code>24V</code>, refer to <a href="#charger-issues">Charger Issues</a></li>
+</ul>
+</li>
+<li>
+<p>Verify that sensors are securely connected and in the correct positions</p>
+<ul>
+<li>Refer to <a href="#sensor-issues">Sensor Issues</a></li>
+</ul>
+</li>
+<li>
+<p>If board is receiving <code>24V</code>, no other issues have been found, and errors are still present:</p>
+<ul>
+<li>Refer to <a href="#board-issues">Board Issues</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="addressing">Addressing<a class="headerlink" href="#addressing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The DIP switches may be used</li>
+<li></li>
+</ul>
+<h3 id="overcurrent-issues">Overcurrent Issues<a class="headerlink" href="#overcurrent-issues" title="Permanent link">&para;</a></h3>
+<p><img alt="Lights" src="../assets/Lights2.jpg" style="height:350px;width:350px" />        </p>
+<ul>
+<li>Overcurrents may be caused by an obstruction in the switch, or a sudden change in the load experienced by the motor</li>
+<li>The <code>Over Current Reset</code> light indicates an overcurrent issue has occurred </li>
+<li>After an overcurrent issue, the RAR must be reset to unlock movement</li>
+<li>Upon resetting, use <code>Jog Left</code> and <code>Jog Right</code> buttons to test for resistance throughout the range of travel</li>
+<li>Once any obstructions have been removed and motion has been tested, close lid and use <code>Move Left</code> and <code>Move Right</code> buttons to ensure error has been fully cleared</li>
+</ul>
+<h3 id="charger-issues">Charger Issues<a class="headerlink" href="#charger-issues" title="Permanent link">&para;</a></h3>
+<p><img alt="Charger" src="../assets/Charger.jpg" style="height:350px;width:350px" />    </p>
+<ul>
+<li>If battery is providing less than <code>24V</code>, there may be an issue with the battery charger</li>
+<li>Battery charger features two status lights, <span style="background-color:rgb(255, 0, 0)"><span style="color:white;">red</span></span> (LED1) indicates charging is active, while <span style="background-color:rgb(0, 153, 69)"><span style="color:white;">green</span></span> (LED2) turns on when the battery is fully charged</li>
+<li><strong>If charger is not functioning, replace fuse</strong></li>
+</ul>
+<h3 id="relay-issues">Relay Issues<a class="headerlink" href="#relay-issues" title="Permanent link">&para;</a></h3>
+<p>The RAR board features six relays. One for each motor direction, one for overcurrent, one for the emergency stop, and two for the battery charger.</p>
+<h4 id="motor-relays">Motor relays<a class="headerlink" href="#motor-relays" title="Permanent link">&para;</a></h4>
+<ul>
+<li>If the motor is only functioning in one direct, swap A&amp;B relays</li>
+</ul>
+<h4 id="charger-relays">Charger Relays<a class="headerlink" href="#charger-relays" title="Permanent link">&para;</a></h4>
+<h3 id="sensor-issues">Sensor Issues<a class="headerlink" href="#sensor-issues" title="Permanent link">&para;</a></h3>
+<p><img alt="Sensors" src="../assets/Sensors.jpg" style="height:350px;width:350px" />        </p>
+<p>Each end stop has two sensors: a <code>Position</code> switch in the inside slot, close to the center of the disc, and a <code>Limit</code> switch in the slot nearer to the edge. As the motor approaches either end stop, the position switch will always trigger first, followed by the limit switch.</p>
+<p><img alt="Lights" src="../assets/Lights3.jpg" style="height:350px;width:350px" />     </p>
+<p>Each sensor features its own indicator light and a corresponding status light on the board. </p>
+<ul>
+<li>For example, when the motor approaches the right endstop, <code>Right Position</code> will trigger before <code>Right Limit</code></li>
+<li><code>Right Limit</code> triggering before <code>Right Position</code> indicates an improper connection order</li>
+<li>If <code>Right Limit</code> triggers by itself, without <code>Right Position</code> being triggered first, this also shows a connection problem</li>
+</ul>
+<p>Conversely, the sensors corresponding to the same side will always trigger in sequence.</p>
+<ul>
+<li>For example, <code>Left Position</code> will trigger followed by <code>Left Limit</code> when the motor reaches the left endstop</li>
+<li><code>Right Position</code> triggering followed by <code>Left Limit</code> demonstrates an sensor is connected in an improper location</li>
+</ul>
+<p><strong>Use the </strong><code>Jog</code><strong> buttons to verify that each sensor functions and is in the correct position.</strong></p>
+<h3 id="board-issues">Board Issues<a class="headerlink" href="#board-issues" title="Permanent link">&para;</a></h3>
+<p>If the above troubleshooting steps have been performed, and an issue has not been isolated, the fault may be with the board itself.</p>
+<ul>
+<li>To test the board, use a multimeter to measure the output voltage</li>
+<li>If board is receiving 24 Volts, and output voltage measures 0 Volts, disconnect power and swap the board with a new replacement</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
